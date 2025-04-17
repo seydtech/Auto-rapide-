@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Rapide - Catalogue</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+    h1 { text-align: center; color: #333; }
+    .product { background: #fff; border-radius: 10px; padding: 15px; margin: 10px auto; width: 90%; max-width: 400px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .product img { width: 100%; height: auto; border-radius: 10px; }
+    .product h2 { margin: 10px 0 5px; }
+    .product p { margin: 5px 0; }
+    .order-form { margin-top: 10px; }
+    input, button { width: 100%; padding: 10px; margin: 5px 0; border-radius: 5px; border: 1px solid #ccc; }
+    button { background: orange; color: white; border: none; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Bienvenue chez Auto Rapide</h1>
+
+  <div class="product">
+    <img src="https://via.placeholder.com/400x200" alt="Pièce auto">
+    <h2>Filtre à huile</h2>
+    <p>Prix : 5 000 FCFA</p>
+
+    <form class="order-form">
+      <input type="text" name="name" placeholder="Votre nom" required>
+      <input type="tel" name="phone" placeholder="Téléphone" required>
+      <input type="number" name="quantity" placeholder="Quantité" value="1" required>
+      <button type="submit">Commander</button>
+    </form>
+  </div>
+
+  <div class="product">
+    <img src="https://via.placeholder.com/400x200" alt="Pièce auto">
+    <h2>Plaquettes de frein</h2>
+    <p>Prix : 12 000 FCFA</p>
+
+    <form class="order-form">
+      <input type="text" name="name" placeholder="Votre nom" required>
+      <input type="tel" name="phone" placeholder="Téléphone" required>
+      <input type="number" name="quantity" placeholder="Quantité" value="1" required>
+      <button type="submit">Commander</button>
+    </form>
+  </div>
+
+  <script>
+    document.querySelectorAll('.order-form').forEach(form => {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Commande envoyée avec succès !');
+        form.reset();
+      });
+    });
+  </script>
+</body>
+</html>
